@@ -1,0 +1,4 @@
+ln -s ~/dotfile/config/omf/ ~/.config/omf
+ln -s ~/dotfile/config/fish/ ~/.config/fish
+ln -s ~/dotfile/tmux/tmux.conf ~/.tmux.conf
+ln -s ~/dotfile/tmux/tmux-themepack ~/.tmux-themepack
