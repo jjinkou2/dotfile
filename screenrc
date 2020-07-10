@@ -1,0 +1,64 @@
+# turn of visual flash
+vbell off
+
+# ------------------------------------------------------------------------------
+# # TERMINAL SETTINGS
+# # ------------------------------------------------------------------------------
+#
+backtick 101 600 600 hostname -i
+# # The vt100 description does not mention "dl". *sigh*
+termcapinfo vt100 dl=5\E[M
+#
+# # turn sending of screen messages to hardstatus off
+hardstatus on
+# # Set the hardstatus prop on gui terms to set the titlebar/icon title
+# termcapinfo xterm*|rxvt*|kterm*|terminator*|Eterm* hs:ts=\E]0;:fs=\007:ds=\E]0;\007
+# # use this for the hard status string
+# #change the hardstatus settings to give an window list at the bottom of the
+# #screen, with the time and date and with the current window highlighted
+hardstatus alwaysfirstline 
+# #hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%< %{= kG}%-=%c:%s%{-}'
+# #hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+# #hardstatus string "%{bk}%?%-Lw%?%{wb}%n*%f %t%?(%u)%?%{bk}%?%+Lw%= %{mk}@ %H %{ck}%Y%{bk}-%{ck}%m%{bk}-%{ck}%d %{yk}%D %{gk}%c"
+#hardstatus string "%{=b .r}%D %d/%m %{w}- %{r}%c%{w} || [%{g}@%H%{w}] %w %= %1` | %{b}%l%{w}"
+#hardstatus string "%{=b .r}%D %d/%m %{w}- %{r}%c%{w} || [%{g}@%101`%{w}] %w %= %1` | %{b}%l%{w}"
+hardstatus string "%{=b} [%{g}@%101`%{b}]  %-Lw%{= BW}%n%f* %t%{-}%+Lw%=  %{=b .r}%D %d/%m %{w}- %{g}%c%{w} "
+#hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
+
+#hardstatus string '%{= dW}[ %{dg}%H %{dW}][%{dc}%= %?%-Lw%?%{dy}(%{dW}%n*%f %t%?(%u)%?%{dy})%{= dc}%?%+Lw%?%?%= %{dW}][%{dM}%l%{dW}][%{dy} %m/%d %c %{dW}]'
+
+# #hardstatus string '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %m/%d %c ]%{W}'
+# #hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+# #hardstatus string "%{+b Rk}(%{-b g}$LOGNAME@%H%{+b R}) (%{-b g}%C %a%{+b R}) %{-b g} %n %t %h"
+# #hardstatus string '%{= kG}%-Lw%{= kW}%50> %n%f* %t%{= kG}%+Lw%< %{= kG}%-=%c:%s%{-}'
+# #hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W}%c %{g}]'
+#hardstatus string '%{= kG}%{C}Screen: %{c}%{= kG}[%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{C} %d-%m %{W}%c %{g}]'
+
+
+#hardstatus string "%{= kG}%{g}[ %{W}$LOGNAME@%H%{g} ] [%= %{= kw}%?%-Lw%?%{W}<< %n*%f%t%?(%u)%? >>%{w}%?%+Lw%?%?%= %{g}] [ %{W}%c:%s%{g} ]"
+#
+# # set these terminals up to be 'optimal' instead of vt100
+# termcapinfo xterm*|linux*|rxvt*|Eterm* OP
+#
+# # Change the xterm initialization string from is2=\E[!p\E[?3;4l\E[4l\E>
+# # (This fixes the "Aborted because of window size change" konsole symptoms found
+# #  in bug #134198)
+#termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+attrcolor b ".I"
+termcapinfo xterm* 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+term screen-256color
+
+defbce "on"
+#screen scroll
+termcapinfo xterm* ti@:te@
+# # To get screen to add lines to xterm's scrollback buffer, uncomment the
+# # following termcapinfo line which tells xterm to use the normal screen buffer
+# # (which has scrollback), not the alternate screen buffer.
+# #
+# #termcapinfo xterm|xterms|xs|rxvt ti@:te@
+#
+# # Enable non-blocking mode to better cope with flaky ssh connections.
+defnonblock 5
+
+
