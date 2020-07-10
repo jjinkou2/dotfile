@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/opt/application/vltwas/webapp/OTP/web/root/var/www/html/app/Config'
+let g:netrw_dirhist_3='/opt/application/vltwas/webapp/OTP/web/root/var/www/html/app'
+let g:netrw_dirhist_2='/opt/application/vltwas/webapp/OTP/web/root/var/www/html'
+let g:netrw_dirhist_1='/opt/application/vltwas/webapp/OTP/web/root/var/www'
+let g:netrw_dirhist_0='/opt/application/vltwas/webapp/OTP/web/root/var'
+let g:netrw_dirhist_9='/opt/application/vltwas/webapp/OTP/web/root'
+let g:netrw_dirhist_8='/opt/application/vltwas/webapp/OTP/web'
+let g:netrw_dirhist_7='/opt/application/vltwas/webapp/OTP'
+let g:netrw_dirhist_6='/opt/application/vltwas/webapp/OTP/web/root/var/www/html/app/Controllers/Admin'
+let g:netrw_dirhist_5='/opt/application/vltwas/webapp/OTP/web/root/var/www/html/app/Controllers'
