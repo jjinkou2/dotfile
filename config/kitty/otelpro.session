@@ -1,0 +1,10 @@
+# Set the window layout for the current tab
+new_tab synchronet 
+cd ~/Bureau
+launch env TERM=xterm-256color ssh otelpro
+layout tall
+
+new_tab portail
+cd ~/Bureau
+launch env TERM=xterm-256color ssh otelpro
+layout tall
