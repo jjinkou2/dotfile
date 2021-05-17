@@ -35,6 +35,9 @@ colorscheme = "PaperColor"
     bootstrap_before = 'myspacevim#before'
     bootstrap_after = 'myspacevim#after'
 
+  # autocompletion
+    autocomplete_method = "coc"
+
 # Enable autocomplete layer
 [[layers]]
 name = 'autocomplete'
@@ -54,6 +57,13 @@ name = 'lang#javascript'
 
 [[layers]]
 name = 'lang#go'
+
+[[layers]]
+  name = "lsp"
+  filetypes = [
+    "php",
+    "javascript"
+  ]
 
 [[custom_plugins]]
   name = "dracula/vim"
