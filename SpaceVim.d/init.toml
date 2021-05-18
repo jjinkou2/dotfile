@@ -45,6 +45,10 @@ auto_completion_return_key_behavior = "complete"
 auto_completion_tab_key_behavior = "cycle"
 
 [[layers]]
+name = 'format'
+format_on_save = true
+
+[[layers]]
 name = 'shell'
 default_position = 'top'
 default_height = 30
