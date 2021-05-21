@@ -60,6 +60,9 @@ name = 'lang#javascript'
 name = 'lang#go'
 
 [[layers]]
+name = 'lang#vue'
+
+[[layers]]
   name = "lsp"
   filetypes = [
     "php",
