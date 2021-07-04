@@ -12,10 +12,14 @@
     # if you want to use more colorscheme, please load the colorscheme
     # layer
 #    colorscheme = "gruvbox"
-#colorscheme = "dracula"
-#   colorscheme_bg = "dark"
-colorscheme = "PaperColor"
-   colorscheme_bg = "light"
+#
+# colorscheme = "dracula"
+# colorscheme_bg = "dark"
+  
+#colorscheme = "PaperColor"
+  colorscheme = "onehalflight"
+  colorscheme_bg = "light"
+
     # Disable guicolors in basic mode, many terminal do not support 24bit
     # true colors
     enable_guicolors = true
@@ -48,26 +52,29 @@ auto_completion_tab_key_behavior = "cycle"
 name = 'shell'
 default_position = 'top'
 default_height = 30
-[[layers]]
-name = 'lang#php'
+#[[layers]]
+#name = 'lang#php'
 format_on_save = true
 [[layers]]
 name = 'lang#html'
 [[layers]]
 name = 'lang#javascript'
 
-[[layers]]
-name = 'lang#go'
+#[[layers]]
+#name = 'lang#go'
 
 [[layers]]
-name = 'lang#vue'
+ name = 'lang#vue'
 
-
+[[layers]]
+name = 'git'
+git_plugin="fugitive"
 
 [[layers]]
   name = "lsp"
   filetypes = [
     "php",
+    "vue",
     "javascript"
   ]
 
@@ -77,4 +84,16 @@ name = 'lang#vue'
 
 [[custom_plugins]]
   repo = "NLKNguyen/papercolor-theme"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "leafOfTree/vim-vue-plugin"
+  merged = 0
+
+[[custom_plugins]]
+  repo = "sonph/onehalf"
+  rtp = "vim"
+
+[[custom_plugins]]
+  repo="tribela/vim-transparent"
   merged = 0

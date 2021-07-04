@@ -17,6 +17,10 @@ function! myspacevim#before() abort
 
   let g:dracula_colorterm = 0
 
+  let g:NERDTreeGitStatusPorcelainVersion = 1
+
+  " for vue
+  autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css 
 
 endfunction
 
@@ -26,7 +30,8 @@ function! myspacevim#switchTheme() abort
     set background=dark
     let g:theme = "dark"
   :else 
-    colorscheme PaperColor
+    "colorscheme PaperColor
+    colorscheme onehalflight
     set background=light
     let g:theme = "light"
   :endif 
@@ -38,5 +43,6 @@ endfunction
 function! myspacevim#after() abort
   highlight Comment cterm=italic gui=italic
   let g:indentLine_char = '▏' 
-  set ttymouse=xterm2
+ "  set ttymouse=xterm2
+
 endfunction
